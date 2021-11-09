@@ -1,4 +1,24 @@
 <div class="container">
-  <h1>TO DO LIST</h1>
+  <div class="row">
+    <div class="col-12">
+      <h1 class="mb-3 mt-3">TO DO LIST</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+          <th>Status</th>
+          <th>Task</th>
+          <th>Responsible</th>
+        </thead>
+        <tr *ngFor="let task of tasks">
+          <td><input type="checkbox" /></td>
+          <td>{{ task.title }}</td>
+          <td>{{ task.author }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
