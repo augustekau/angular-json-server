@@ -13,6 +13,22 @@ export class TaskService {
   constructor(private http: HttpClient) {}
 
   getTasks(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.apiUrl);
+    let uri = this.apiUrl;
+    return this.http.get<Task[]>(uri);
   }
+  toggleTask(task: Task) {
+    //1 budas
+    let uri = this.apiUrl + '/' + task.id;
+
+    //2 budas
+    uri = `${this.apiUrl}/${task.id}`;
+
+    let body = { completed: task.completed };
+
+    return this.http.patch(uri, body);
+    return this.http.patch(uri, task);
+  }
+  createTask() {}
+  updateTask() {}
+  deleteTask() {}
 }

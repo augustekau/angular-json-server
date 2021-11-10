@@ -4,19 +4,19 @@
       "id": 1,
       "title": "Take out trash",
       "author": "Alex",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
       "title": "Grocery shopping",
       "author": "Judy",
-      "completed": true
+      "completed": false
     },
     {
       "id": 3,
       "title": "Walk the dog",
       "author": "Ross",
-      "completed": false
+      "completed": true
     }
   ]
 }

@@ -18,5 +18,12 @@ export class TodoListComponent implements OnInit {
     });
   }
 
+  toggleTask(task: Task) {
+    task.completed = !task.completed;
+    this._taskService.toggleTask(task).subscribe((data: any) => {
+      console.log(data);
+    });
+  }
+
   ngOnInit(): void {}
 }
