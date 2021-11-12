@@ -28,5 +28,15 @@ export class TodoListComponent implements OnInit {
     });
   }
 
+  deleteTask(task: Task) {
+    console.log('Task Will be deleted:');
+    console.log(task);
+    this._taskService.deleteTask(task).subscribe((data) => {
+      console.log(data);
+      // Po sekmingo istrynimo atnaujiname tasks duomenis
+      this.getTasks();
+    });
+  }
+
   ngOnInit(): void {}
 }

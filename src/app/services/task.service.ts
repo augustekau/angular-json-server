@@ -32,6 +32,13 @@ export class TaskService {
     let uri = this.apiUrl;
     return this.http.post(uri, task);
   }
+
+  deleteTask(task: Task) {
+    let uri = this.apiUrl + '/' + task.id;
+    // Kreipdamisei DELETE metodu i: http://localhost:3000/tasks/id
+    // Istrininame irasa duombazeje
+    return this.http.delete(uri);
+  }
+
   updateTask() {}
-  deleteTask() {}
 }

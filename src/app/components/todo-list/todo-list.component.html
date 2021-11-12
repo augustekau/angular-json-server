@@ -22,6 +22,11 @@
         </td>
         <td>{{ task.title }}</td>
         <td>{{ task.author }}</td>
+        <td>
+          <button (click)="deleteTask(task)" class="btn btn-danger bg-danger">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </td>
       </tr>
     </table>
   </div>
