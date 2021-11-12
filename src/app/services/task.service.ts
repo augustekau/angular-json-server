@@ -28,7 +28,10 @@ export class TaskService {
     return this.http.patch(uri, body);
     return this.http.patch(uri, task);
   }
-  createTask() {}
+  createTask(task: Task) {
+    let uri = this.apiUrl;
+    return this.http.post(uri, task);
+  }
   updateTask() {}
   deleteTask() {}
 }

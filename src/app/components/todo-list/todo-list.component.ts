@@ -11,7 +11,10 @@ export class TodoListComponent implements OnInit {
   public tasks: Task[] = [];
 
   constructor(private _taskService: TaskService) {
-    // Gauname duomenis is task Service
+    this.getTasks();
+  }
+  // Gauname duomenis is task Service
+  getTasks() {
     this._taskService.getTasks().subscribe((data: Task[]) => {
       this.tasks = data;
       console.log(this.tasks);

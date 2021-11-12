@@ -1,1 +1,22 @@
-<p>add-task works!</p>
+<h3>Add task</h3>
+<form (ngSubmit)="addTask()" #form>
+  <div class="row">
+    <div class="col-12 form-group">
+      <input
+        [(ngModel)]="task.title"
+        type="text"
+        placeholder="Add task"
+        name="title"
+        class="mb-3"
+      />
+      <input
+        [(ngModel)]="task.author"
+        type="text"
+        placeholder="Add author"
+        class="mb-3"
+        name="author"
+      />
+      <input type="submit" class="btn btn-primary" value="Add task" />
+    </div>
+  </div>
+</form>

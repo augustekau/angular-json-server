@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Take out trash",
       "author": "Alex",
-      "completed": true
+      "completed": false
     },
     {
       "id": 2,
@@ -16,7 +16,19 @@
       "id": 3,
       "title": "Walk the dog",
       "author": "Ross",
-      "completed": true
+      "completed": false
+    },
+    {
+      "title": "Make dinner",
+      "author": "Monica",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "Water plants",
+      "author": "Amie",
+      "completed": false,
+      "id": 5
     }
   ]
 }
