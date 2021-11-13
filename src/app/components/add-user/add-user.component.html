@@ -1,0 +1,22 @@
+<h3>Add User</h3>
+<form (ngSubmit)="addUser()" #form>
+  <div class="row">
+    <div class="col-12 form-group">
+      <input
+        [(ngModel)]="user.name"
+        type="text"
+        placeholder="Enter User"
+        name="title"
+        class="mb-3"
+      />
+      <input
+        [(ngModel)]="user.email"
+        type="text"
+        placeholder="Enter email address"
+        class="mb-3"
+        name="author"
+      />
+      <input type="submit" class="btn btn-primary" value="Add task" />
+    </div>
+  </div>
+</form>

@@ -30,6 +30,16 @@
       "id": 1,
       "name": "Test",
       "email": "labas@gmail.com"
+    },
+    {
+      "name": "Joe",
+      "email": "Joe@email.com",
+      "id": 2
+    },
+    {
+      "name": "Steve",
+      "email": "steve@email.com",
+      "id": 3
     }
   ],
   "projects": [

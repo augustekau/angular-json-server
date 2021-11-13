@@ -15,4 +15,8 @@ export class UserService {
     let uri = this.apiUrl;
     return this.http.get<User[]>(uri);
   }
+  createUser(user: User) {
+    let uri = this.apiUrl;
+    return this.http.post(uri, user);
+  }
 }
