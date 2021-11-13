@@ -21,5 +21,15 @@ export class UsersListComponent implements OnInit {
     });
   }
 
+  deleteUser(user: User) {
+    console.log('Task Will be deleted:');
+    console.log(user);
+    this._userService.deleteUser(user).subscribe((data) => {
+      console.log(data);
+      // Po sekmingo istrynimo atnaujiname tasks duomenis
+      this.getUsers();
+    });
+  }
+
   ngOnInit(): void {}
 }

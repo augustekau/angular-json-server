@@ -19,4 +19,8 @@ export class UserService {
     let uri = this.apiUrl;
     return this.http.post(uri, user);
   }
+  deleteUser(user: User) {
+    let uri = this.apiUrl + '/' + user.id;
+    return this.http.delete(uri);
+  }
 }
