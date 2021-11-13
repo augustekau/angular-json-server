@@ -24,5 +24,19 @@
       "completed": false,
       "id": 4
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Test",
+      "email": "labas@gmail.com"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project 1",
+      "logo": "#"
+    }
   ]
 }

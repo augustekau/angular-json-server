@@ -9,6 +9,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TaskCardComponent } from './components/task-card/task-card.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MenuComponent } from './components/menu/menu.component';
     TaskCardComponent,
     AddTaskComponent,
     MenuComponent,
+    UsersListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
