@@ -1,28 +1,32 @@
-<app-add-task (newItemEvent)="getTasks()"></app-add-task>
-<div class="row">
-  <div class="col-12">
-    <table class="table">
-      <thead>
-        <th>Status</th>
-        <th>Task</th>
-        <th>Responsible</th>
-      </thead>
-      <tr *ngFor="let task of tasks" [class.task-completed]="task.completed">
-        <td>
-          <input
-            type="checkbox"
-            [checked]="task.completed"
-            (change)="toggleTask(task)"
-          />
-        </td>
-        <td>{{ task.title }}</td>
-        <td>{{ task.author }}</td>
-        <td>
-          <button (click)="deleteTask(task)" class="btn btn-danger bg-danger">
-            <i class="bi bi-trash-fill"></i>
-          </button>
-        </td>
-      </tr>
-    </table>
+<div class="row light-color round-corners mb-3">
+  <app-add-task (newItemEvent)="getTasks()"></app-add-task>
+</div>
+<div class="row light-color round-corners">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+          <th>Status</th>
+          <th>Task</th>
+          <th>Responsible</th>
+        </thead>
+        <tr *ngFor="let task of tasks" [class.task-completed]="task.completed">
+          <td>
+            <input
+              type="checkbox"
+              [checked]="task.completed"
+              (change)="toggleTask(task)"
+            />
+          </td>
+          <td>{{ task.title }}</td>
+          <td>{{ task.author }}</td>
+          <td>
+            <button (click)="deleteTask(task)" class="btn btn-danger bg-danger">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>

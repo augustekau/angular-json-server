@@ -1,5 +1,13 @@
 :host {
   .container {
     box-sizing: border-box;
+    // height: 100vh;
+  }
+  .menu {
+    margin-right: 20px;
+    margin-left: -10px;
+  }
+  .list {
+    margin-right: -10px;
   }
 }
