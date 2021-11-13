@@ -1,3 +1,17 @@
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="container darker-color mt-5 mb-5 round-corners">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="mb-3 mt-3 text-center mb-5 mt-5">
+        TO DO LIST <i class="bi bi-activity"></i>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 light-color round-corners">
+      <div class="col-sm-12"><app-menu></app-menu></div>
+    </div>
+    <div class="col-sm-8 round-corners light-color">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
