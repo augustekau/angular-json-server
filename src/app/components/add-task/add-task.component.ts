@@ -23,7 +23,9 @@ export class AddTaskComponent implements OnInit {
     this._taskService.createTask(this.task).subscribe((data: any) => {
       // alert('Task succesfully added!');
       console.log(data);
-      this.newItemEvent.emit(data);
+      (this.task.title = ''),
+        (this.task.author = ''),
+        this.newItemEvent.emit(data);
     });
   }
 }

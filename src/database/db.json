@@ -4,42 +4,62 @@
       "id": 1,
       "title": "Take out trash",
       "author": "Alex",
-      "completed": false
+      "completed": false,
+      "userId": 1
     },
     {
       "id": 2,
       "title": "Grocery shopping",
       "author": "Judy",
-      "completed": false
+      "completed": false,
+      "userId": 2
     },
     {
       "id": 3,
       "title": "Walk the dog",
       "author": "Ross",
-      "completed": false
+      "completed": false,
+      "userId": 3
     },
     {
       "title": "Make dinner",
       "author": "Monica",
       "completed": false,
-      "id": 4
+      "id": 4,
+      "userId": 1
+    },
+    {
+      "title": "Wash dishes",
+      "author": "John",
+      "completed": false,
+      "id": 5,
+      "userId": 5
     }
   ],
   "users": [
     {
       "name": "Joe",
       "email": "Joe@email.com",
-      "id": 2
+      "id": 2,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl6JPaMyl7e0oZfSdBa84_MTOUWwR50niJlLF79QPOlAIEYlSwWcWLG35W3EFI0iGzWFc&usqp=CAU"
     },
     {
       "name": "Steve",
       "email": "steve@email.com",
-      "id": 3
+      "id": 3,
+      "photo": "https://www.pngitem.com/pimgs/m/111-1114839_circle-people-icon-flat-png-avatar-icon-transparent.png"
     },
     {
       "name": "Monica",
       "email": "monica@email.com",
-      "id": 4
+      "id": 4,
+      "photo": "https://cdn.icon-icons.com/icons2/2643/PNG/512/female_woman_user_people_person_avatar_black_tone_icon_159361.png"
+    },
+    {
+      "name": "Sophia",
+      "email": "sophia@email.com",
+      "id": 5,
+      "photo": "https://lumierecreatif.com/wp-content/uploads/2020/09/a65832155622ac173337874f02b218fb.png"
     }
   ],
   "projects": [

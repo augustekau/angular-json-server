@@ -1,0 +1,21 @@
+:host {
+  li a {
+    text-decoration: none;
+    color: black;
+  }
+  li a:hover {
+    color: #fd7b38;
+    transition: ease-in-out;
+  }
+  li a:active {
+    color: #fd7b38;
+  }
+  .card-header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .list-group {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}

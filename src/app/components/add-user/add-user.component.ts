@@ -21,6 +21,7 @@ export class AddUserComponent implements OnInit {
     console.log('form submit works');
     this._userService.createUser(this.user).subscribe((data: any) => {
       // alert('Task succesfully added!');
+      (this.user.name = ''), (this.user.email = '');
       console.log(data);
       this.newItemEvent.emit(data);
     });
