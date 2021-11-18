@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Task } from 'src/app/interfaces/task';
 import { TaskService } from 'src/app/services/task.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-task',
@@ -18,15 +19,21 @@ export class AddTaskComponent implements OnInit {
   constructor(private _taskService: TaskService) {}
 
   ngOnInit(): void {}
-  addTask() {
-    console.log('form submit works');
-    this._taskService.createTask(this.task).subscribe((data: any) => {
-      // alert('Task succesfully added!');
-      console.log(data);
-      (this.task.title = ''),
-        (this.task.author = ''),
-        (this.task.priority = ''),
+  addTask(form: NgForm) {
+    // console.log('form submit works');
+    if (form.valid) {
+      this._taskService.createTask(this.task).subscribe((data: any) => {
+        // alert('Task succesfully added!');
+        console.log(data);
+        //instead of
+        // (this.task.title = ''),
+        //   (this.task.author = ''),
+        //   (this.task.priority = ''),
+        form.resetForm();
         this.newItemEvent.emit(data);
-    });
+      });
+    } else {
+      // alert('Please check your form data');
+    }
   }
 }

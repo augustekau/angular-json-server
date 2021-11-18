@@ -1,13 +1,6 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Take out trash",
-      "author": "Alex",
-      "completed": false,
-      "userId": 1
-    },
-    {
       "id": 2,
       "title": "Grocery shopping",
       "author": "Judy",
@@ -20,13 +13,6 @@
       "author": "Ross",
       "completed": false,
       "userId": 3
-    },
-    {
-      "title": "Make dinner",
-      "author": "Monica",
-      "completed": false,
-      "id": 4,
-      "userId": 1
     },
     {
       "title": "Wash dishes",
@@ -55,6 +41,13 @@
       "completed": false,
       "priority": "low",
       "id": 8
+    },
+    {
+      "title": "Do homework",
+      "author": "Michael",
+      "completed": false,
+      "priority": "mediun",
+      "id": 9
     }
   ],
   "users": [
