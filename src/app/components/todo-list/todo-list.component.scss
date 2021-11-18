@@ -1,0 +1,29 @@
+:host {
+  .task-details-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: white;
+    min-width: 300px;
+    z-index: 10;
+  }
+  .task-details-overlay {
+    background: black;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    /* Musu overaly elementas, ignoruoja click event'us */
+    // pointer-events: none;
+  }
+
+  .task-details-toggle-button {
+    cursor: pointer;
+  }
+  .orange {
+    background-color: #f7905d;
+  }
+}

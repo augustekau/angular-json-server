@@ -1,1 +1,36 @@
-<p>task-card works!</p>
+<div class="task-details-container card h-100">
+  <div class="card-header">
+    <h2>
+      {{ task?.title }}
+    </h2>
+  </div>
+
+  <div class="card-body">
+    Author: {{ task?.author }}
+
+    <hr />
+    <div class="comments">
+      <h6 class="mb-3">Add a comment</h6>
+      <form>
+        <textarea placeholder="Add a comment" class="form-control"></textarea>
+        <input type="submit" class="btn btn-success mt-3" />
+      </form>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <button
+      type="button"
+      class="btn btn-sm btn-danger me-3"
+      (click)="closeTaskDetails()"
+    >
+      Close
+    </button>
+
+    <!-- TODO: padaryti, kad sis mygtukas istrintu uzduoti ir uzdarytu task-details komponenta -->
+    <button type="button" class="btn btn-sm btn-danger me-3">Delete</button>
+
+    <!-- TODO: padaryti, kad sis mygtukas sukurtu nauja tokia pacia uzduoti -->
+    <button type="button" class="btn btn-sm btn-info">Duplicate</button>
+  </div>
+</div>

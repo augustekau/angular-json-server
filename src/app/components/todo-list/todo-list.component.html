@@ -11,15 +11,39 @@
           <th>Responsible</th>
           <th>Priority</th>
         </thead>
-        <tr *ngFor="let task of tasks" [class.task-completed]="task.completed">
+        <tr
+          *ngFor="let task of tasks"
+          [class.task-completed]="task.completed"
+          [class.orange]="task.id == selectedTask?.id"
+        >
           <td>
+            <!-- TODO add some icon when task is completed + ICONS ACCORDING TO PRIORITY -->
+            <!-- <i
+              class="bi-alarm"
+              [class.text-success]="task.completed"
+              [ngClass]="{
+                'text-success': task.completed,
+                'text-danger': !task.completed
+              }"
+              *ngIf="task.completed"
+            ></i> -->
+
+            <!-- Rodoma: Jei uzduoties completed kintamasis yra false -->
+            <!-- <i class="bi-alarm text-danger" *ngIf="!task.completed"></i> -->
             <input
               type="checkbox"
               [checked]="task.completed"
               (change)="toggleTask(task)"
             />
           </td>
-          <td>{{ task.title }}</td>
+          <td>
+            <span
+              (click)="toggleTaskDetails(task)"
+              class="task-details-toggle-button"
+            >
+              {{ task.title }}
+            </span>
+          </td>
           <td>{{ task.author }}</td>
           <td>{{ task.priority }}</td>
           <td>
@@ -31,4 +55,16 @@
       </table>
     </div>
   </div>
+</div>
+
+<div *ngIf="showTaskDetails">
+  <app-task-card
+    [task]="selectedTask"
+    class="task-details-container"
+    (taskDetailsCloseEvent)="toggleTaskDetails(null, true)"
+  ></app-task-card>
+  <div
+    class="task-details-overlay"
+    (click)="toggleTaskDetails(null, true)"
+  ></div>
 </div>
