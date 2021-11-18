@@ -1,7 +1,7 @@
-<h3>Add task</h3>
+<h3 class="mt-3">Add task</h3>
 <form (ngSubmit)="addTask()" #form>
   <div class="row">
-    <div class="col-12 form-group">
+    <div class="col-sm-4">
       <input
         [(ngModel)]="task.title"
         type="text"
@@ -9,6 +9,8 @@
         name="title"
         class="mb-3"
       />
+    </div>
+    <div class="col-sm-4">
       <input
         [(ngModel)]="task.author"
         type="text"
@@ -16,7 +18,16 @@
         class="mb-3"
         name="author"
       />
-      <input type="submit" class="btn btn-primary" value="Add task" />
+    </div>
+
+    <div class="col-sm-4">
+      <select name="priority" [(ngModel)]="task.priority" class="form-select">
+        <option value="" disabled>Select priority</option>
+        <option value="high" ngValue="high">High</option>
+        <option value="medium" [ngValue]="'mediun'">Medium</option>
+        <option value="low" [ngValue]="'low'">Low</option>
+      </select>
     </div>
   </div>
+  <input type="submit" class="btn btn-primary mb-3" value="Add task" />
 </form>

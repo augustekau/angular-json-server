@@ -34,6 +34,27 @@
       "completed": false,
       "id": 5,
       "userId": 5
+    },
+    {
+      "title": "Buy eggs",
+      "author": "Lauren",
+      "completed": false,
+      "priority": "high",
+      "id": 6
+    },
+    {
+      "title": "Buy water",
+      "author": "Steve",
+      "completed": false,
+      "priority": "high",
+      "id": 7
+    },
+    {
+      "title": "Buy milk",
+      "author": "Helen",
+      "completed": false,
+      "priority": "low",
+      "id": 8
     }
   ],
   "users": [

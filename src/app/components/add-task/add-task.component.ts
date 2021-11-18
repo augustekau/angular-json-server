@@ -25,6 +25,7 @@ export class AddTaskComponent implements OnInit {
       console.log(data);
       (this.task.title = ''),
         (this.task.author = ''),
+        (this.task.priority = ''),
         this.newItemEvent.emit(data);
     });
   }

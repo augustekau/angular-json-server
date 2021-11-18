@@ -3,4 +3,5 @@ export interface Task {
   title: string;
   author: string;
   completed: boolean;
+  priority?: string;
 }

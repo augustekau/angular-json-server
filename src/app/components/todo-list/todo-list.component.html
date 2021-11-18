@@ -9,6 +9,7 @@
           <th>Status</th>
           <th>Task</th>
           <th>Responsible</th>
+          <th>Priority</th>
         </thead>
         <tr *ngFor="let task of tasks" [class.task-completed]="task.completed">
           <td>
@@ -20,6 +21,7 @@
           </td>
           <td>{{ task.title }}</td>
           <td>{{ task.author }}</td>
+          <td>{{ task.priority }}</td>
           <td>
             <button (click)="deleteTask(task)" class="btn btn-danger bg-danger">
               <i class="bi bi-trash-fill"></i>
