@@ -3,23 +3,31 @@
 </div>
 
 <div class="row light-color round-corners">
-  <div class="col-12">
-    <table class="table">
-      <thead>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email address</th>
-      </thead>
-      <tr *ngFor="let user of users">
-        <td>{{ user.id }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
-        <td>
+  <div class="col-12 mt-3 mb-3" *ngFor="let user of users">
+    <div class="card darker-color">
+      <div class="row g-0">
+        <div class="col-md-2">
+          <img
+            src="{{ user.photo }}"
+            class="img-fluid rounded-start"
+            alt="user.photo"
+          />
+        </div>
+        <div class="col-md-8 d-flex align-items-center">
+          <div class="card-body">
+            <h5 class="card-title">{{ user.name }}</h5>
+            <p class="card-text">
+              {{ user.email }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-2 d-flex align-items-center justify-content-center">
           <button (click)="deleteUser(user)" class="btn btn-danger bg-danger">
             <i class="bi bi-trash-fill"></i>
           </button>
-        </td>
-      </tr>
-    </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,22 +1,33 @@
 <h3>Add User</h3>
 <form (ngSubmit)="addUser()" #form>
   <div class="row">
-    <div class="col-12 form-group">
+    <div class="col-sm-4">
       <input
         [(ngModel)]="user.name"
         type="text"
         placeholder="Enter User"
         name="title"
-        class="mb-3"
+        class="mb-3 form-control"
       />
+    </div>
+    <div class="col-sm-4">
       <input
         [(ngModel)]="user.email"
         type="text"
         placeholder="Enter email address"
-        class="mb-3"
+        class="mb-3 form-control"
         name="author"
       />
-      <input type="submit" class="btn btn-primary" value="Add task" />
+    </div>
+    <div class="col-sm-4">
+      <input
+        [(ngModel)]="user.photo"
+        type="text"
+        placeholder="Enter photo URL"
+        class="mb-3 form-control"
+        name="photo"
+      />
     </div>
   </div>
+  <input type="submit" class="btn bg-orange text-white mb-3" value="Add user" />
 </form>

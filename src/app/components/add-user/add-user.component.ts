@@ -11,6 +11,7 @@ export class AddUserComponent implements OnInit {
   public user: User = {
     name: '',
     email: '',
+    photo: '',
   };
 
   @Output() newItemEvent = new EventEmitter();
@@ -21,7 +22,7 @@ export class AddUserComponent implements OnInit {
     console.log('form submit works');
     this._userService.createUser(this.user).subscribe((data: any) => {
       // alert('Task succesfully added!');
-      (this.user.name = ''), (this.user.email = '');
+      (this.user.name = ''), (this.user.email = ''), (this.user.photo = '');
       console.log(data);
       this.newItemEvent.emit(data);
     });

@@ -14,7 +14,7 @@
         <tr
           *ngFor="let task of tasks"
           [class.task-completed]="task.completed"
-          [class.orange]="task.id == selectedTask?.id"
+          [class.bg-orange]="task.id == selectedTask?.id"
         >
           <td>
             <!-- TODO add some icon when task is completed + ICONS ACCORDING TO PRIORITY -->

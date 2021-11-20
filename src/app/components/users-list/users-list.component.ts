@@ -30,6 +30,7 @@ export class UsersListComponent implements OnInit {
       this.getUsers();
     });
   }
+  //confirm (pop up table appears)
 
   ngOnInit(): void {}
 }
