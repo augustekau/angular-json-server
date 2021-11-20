@@ -30,11 +30,15 @@
 
             <!-- Rodoma: Jei uzduoties completed kintamasis yra false -->
             <!-- <i class="bi-alarm text-danger" *ngIf="!task.completed"></i> -->
-            <input
-              type="checkbox"
-              [checked]="task.completed"
-              (change)="toggleTask(task)"
-            />
+            <label class="custom-checkbox">
+              <input
+                type="checkbox"
+                [checked]="task.completed"
+                (change)="toggleTask(task)"
+              />
+              <i class="bi bi-check-circle checked"></i>
+              <i class="bi bi-check-circle unchecked"></i>
+            </label>
           </td>
           <td>
             <span
@@ -45,7 +49,9 @@
             </span>
           </td>
           <td>{{ task.author }}</td>
-          <td>{{ task.priority }}</td>
+          <td class="badge rounded-pill bg-orange mt-1">
+            {{ task.priority }}
+          </td>
           <td>
             <button (click)="deleteTask(task)" class="btn btn-danger bg-danger">
               <i class="bi bi-trash-fill"></i>

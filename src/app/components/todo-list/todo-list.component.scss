@@ -23,4 +23,23 @@
   .task-details-toggle-button {
     cursor: pointer;
   }
+
+  //checkbox input
+
+  .custom-checkbox input[type="checkbox"],
+  .custom-checkbox .checked {
+    display: none;
+  }
+  .custom-checkbox input[type="checkbox"]:checked ~ .checked {
+    display: inline-block;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
+    display: none;
+  }
+
+  .badge {
+    font-size: 15px;
+    padding: 10px;
+  }
 }
