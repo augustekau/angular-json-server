@@ -7,12 +7,17 @@
     <div class="card darker-color">
       <div class="row g-0">
         <div class="col-md-2">
-          <img
-            src="{{ user.photo }}"
-            class="img-fluid rounded-start"
-            alt="user.photo"
-          />
+          <div *ngIf="user.photo; else noPhoto">
+            <img src="{{ user.photo }}" class="img-fluid" alt="user.photo" />
+          </div>
+          <ng-template #noPhoto>
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png"
+              class="img-fluid"
+              alt="user.photo"
+          /></ng-template>
         </div>
+
         <div class="col-md-8 d-flex align-items-center">
           <div class="card-body">
             <h5 class="card-title">{{ user.name }}</h5>

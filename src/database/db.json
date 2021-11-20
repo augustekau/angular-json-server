@@ -40,6 +40,12 @@
       "email": "steve@email.com",
       "photo": "https://lumierecreatif.com/wp-content/uploads/2020/09/3_avatar-512.png",
       "id": 7
+    },
+    {
+      "name": "Ellen",
+      "email": "ellen@email.com",
+      "photo": null,
+      "id": 8
     }
   ],
   "projects": [

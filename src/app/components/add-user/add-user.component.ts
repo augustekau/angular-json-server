@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-user',
@@ -18,13 +19,18 @@ export class AddUserComponent implements OnInit {
   constructor(private _userService: UserService) {}
 
   ngOnInit(): void {}
-  addUser() {
-    console.log('form submit works');
-    this._userService.createUser(this.user).subscribe((data: any) => {
-      // alert('Task succesfully added!');
-      (this.user.name = ''), (this.user.email = ''), (this.user.photo = '');
-      console.log(data);
-      this.newItemEvent.emit(data);
-    });
+  addUser(form: NgForm) {
+    // console.log('form submit works');
+    if (form.valid) {
+      this._userService.createUser(this.user).subscribe((data: any) => {
+        // alert('Task succesfully added!');
+        // (this.user.name = ''), (this.user.email = ''), (this.user.photo = '');
+        console.log(data);
+        form.resetForm();
+        this.newItemEvent.emit(data);
+      });
+    } else {
+      // alert('Please check your form data');
+    }
   }
 }
